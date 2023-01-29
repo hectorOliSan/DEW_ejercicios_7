@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniaturas de cuadros</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <style>
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        align-items: center;
+        gap: 10px;
+      }
+
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+        filter: drop-shadow(.1rem .1rem .5rem  #333);
+      }
+    </style>
+  </head>
+  <body class="bg-primary bg-opacity-10">
+    <main class="container p-5">
+      <div class="m-0 d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Miniaturas de cuadros:
+        </p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button
+              title="cerrar"
+              class="btn btn-secondary btn-sm"
+              onclick="cerrar()"
+            >
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Miniaturas de cuadros:</b> Diseñar una web con imágenes de baja
+            resolución de cuadros de pintores grancanarios.
+            <br />
+            Al pulsar sobre uno de ellos se llamará a la página miniaturas.html
+            pasándole el nombre del archivo de alta resolución del cuadro
+            pulsado que se visualizará en la segunda página con el formato
+            mostrado en la figura.
+          </p>
+        </dialog>
+      </div>
+
+      <div id="galeria" class="my-5 galeria"></div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <a class="col-4 mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/miniaturas.js"></script>
+  </body>
+</html>

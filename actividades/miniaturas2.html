@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniaturas 2</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <style>
+      img {
+        transition: all 0.5s ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0.1rem 0.1rem 0.5rem #333);
+      }
+    </style>
+  </head>
+  <body class="bg-primary bg-opacity-10">
+    <main class="container p-5">
+      <p class="fs-2 text-center font-monospace">Imágenes completas</p>
+      <img class="my-5 rounded mx-auto d-block" />
+
+      <div class="mt-4 d-flex justify-content-center">
+        <a class="col-4 mx-2 btn btn-secondary" href="./miniaturas.html"
+          >Volver</a
+        >
+      </div>
+    </main>
+
+    <script>
+      const images = [
+        "Damaso1",
+        "Felo1",
+        "Felo2",
+        "lujan1",
+        "Nestor1",
+        "Nestor2",
+        "Nestor3",
+        "Nestor4",
+        "Padron1",
+        "Padron2",
+      ];
+
+      const params = new URLSearchParams(window.location.search);
+      const imagen = params.get("image");
+      if (imagen === null || !images.includes(imagen))
+        window.location.href = "miniaturas.html";
+
+      const img = document.querySelector("img");
+      img.src = "../img/high_resolution/" + imagen + ".jpg";
+      img.alt = imagen;
+      img.title = imagen;
+    </script>
+  </body>
+</html>

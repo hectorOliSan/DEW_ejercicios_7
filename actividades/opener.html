@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNIDAD 7. Objetos del navegador</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+  </head>
+  <body class="bg-primary bg-opacity-10">
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">Abrir ventanas:</p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Abrir ventanas:</b> Diseñar el ejemplo siguiente que abrirá la
+            página del tutorial denominada opener.html en un popup en las
+            siguientes condiciones:
+            <br />
+          </p>
+          <ol class="ms-5 font-monospace">
+            <li>Botón ABRIR VENTANA SIN CARACTERÍSTICAS UNA SOLA VEZ</li>
+            <li>Botón ABRIR VENTANA SIN CARACTERÍSTICAS VARIAS VECES</li>
+            <li>
+              Botón ABRIR VENTANA CON CARACTERÍSTICAS. Las características
+              solicitadas son ancho 420 px, alto 430 px, sin barra de menú pero
+              con barra de estado y redimensionable.
+            </li>
+            <li>
+              Botón ABRIR VENTANA CON MÁS CARACTERÍSTICAS. Las características
+              solicitadas son ancho 600 px, alto 300 px, colocada en la posición
+              fijada por las coordenadas x=150 px, y sin especificar, sin barra
+              de menú, sin barra de estado, sin barras de scroll,ni de
+              directorio, ni barra de dirección y sin barra de títulos ni de
+              herramientas.
+            </li>
+            <li>Botón ABRIR VENTANA A PANTALLA COMPLETA.</li>
+            <li>Botón CERRAR VENTANAS, cerrará las ventanas abiertas</li>
+          </ol>
+        </dialog>
+      </div>
+
+      <div class="d-grid gap-2 mt-5 col-10 mx-auto">
+        <button type="button" name="boton1" id="boton1" class="btn btn-primary">
+          ABRIR VENTANA SIN CARACTERÍSTICAS UNA SOLA VEZ
+        </button>
+        <button type="button" name="boton2" id="boton2" class="btn btn-primary">
+          ABRIR VENTANA SIN CARACTERÍSTICAS VARIAS VECES
+        </button>
+        <button type="button" name="boton3" id="boton3" class="btn btn-primary">
+          ABRIR VENTANA CON CARACTERÍSTICAS
+        </button>
+        <button type="button" name="boton4" id="boton4" class="btn btn-primary">
+          ABRIR VENTANA CON MÁS CARACTERÍSTICAS
+        </button>
+        <button type="button" name="boton5" id="boton5" class="btn btn-primary">
+          ABRIR VENTANA A PANTALLA COMPLETA
+        </button>
+        <button type="button" name="boton6" id="boton6" class="btn btn-primary">
+          CERRAR VENTANAS
+        </button>
+      </div>
+
+      <div class="mt-5 d-flex justify-content-center">
+        <a class="col-4 mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/opener.js"></script>
+  </body>
+</html>

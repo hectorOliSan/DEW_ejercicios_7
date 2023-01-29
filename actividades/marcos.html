@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emulando marcos con div e iframes</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+  </head>
+  <body class="bg-primary bg-opacity-10">
+    <main class="container p-5">
+      <div id="mensaje"></div>
+      <div class="m-0 d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Emulando marcos con div e iframes:
+        </p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button
+              title="cerrar"
+              class="btn btn-secondary btn-sm"
+              onclick="cerrar()"
+            >
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Emulando marcos con div e iframes:</b> Diseñar una página con
+            tres contenedores de acuerdo al diseño de la figura, con el
+            contenedor izquierdo igual que el derecho. El botón ESCRIBIR
+            visualizará en el contenedor señalado en el grupo de radiobotones
+            (input type="radio") el texto escrito en el control de edición
+            (input type="text").
+            <br />
+            El botón del contenedor derecho COMO SE LLAMAN LOS MARCOS
+            visualizará en una ventana alert los nombres de los tres
+            contenedores.
+          </p>
+        </dialog>
+      </div>
+
+      <div class="p-3 my-2 bg-white rounded">
+        <p>
+          Escribe un texto. elige el contendor y pulsa el botón para que se
+          escriba el texto en el ordenador
+        </p>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Texto:</span>
+          <input type="text" id="texto" title="Texto" class="form-control" />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text rounded me-2">Contenedor:</span>
+          <div class="btn-group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="contenedor"
+              id="izquierdo"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="izquierdo"
+              >Izquierdo</label
+            >
+            <input
+              type="radio"
+              class="btn-check"
+              name="contenedor"
+              id="derecho"
+            />
+            <label class="btn btn-outline-primary" for="derecho">Derecho</label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text rounded me-2">Texto:</span>
+          <div class="d-grid gap-2 col-2">
+            <button
+              type="button"
+              name="escribir"
+              id="escribir"
+              class="btn btn-primary"
+            >
+              ESCRIBIR
+            </button>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 col-2">
+          <button
+            type="button"
+            name="reiniciar"
+            id="reiniciar"
+            class="btn btn-secondary"
+          >
+            REINICIAR
+          </button>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center" style="height: 500px">
+        <iframe
+          id="frameIzquierdo"
+          src="./frames/izquierdo.html"
+          class="flex-fill rounded"
+        ></iframe>
+        <hr class="border border-3 d-flex flex-column" />
+        <iframe
+          id="frameDerecho"
+          src="./frames/derecho.html"
+          class="flex-fill rounded"
+        ></iframe>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <a class="col-4 mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/marcos.js"></script>
+  </body>
+</html>

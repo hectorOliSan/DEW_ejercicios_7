@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contenedor Derecho</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+  </head>
+  <body class="container p-3">
+    <h2 class="text-center font-monospace">Contenedor Derecho</h2>
+    <div class="d-grid gap-2 mb-3">
+      <button type="button" name="nombre" id="nombre" class="btn btn-primary">
+        ¿Cómo se llaman los contenedores?
+      </button>
+    </div>
+    <script>
+      const btn = document.getElementById("nombre");
+
+      // UTILIZAR LIVE SERVER - si no por políticas de HTML no funciona
+      btn.addEventListener("click", () =>
+        alert(
+          window.parent.document.title +
+            "(marcos.html), " +
+            window.parent.document.getElementById("frameIzquierdo")
+              .contentWindow.document.title +
+            " y " +
+            document.title
+        )
+      );
+    </script>
+  </body>
+</html>
