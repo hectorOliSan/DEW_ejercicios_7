@@ -14,18 +14,14 @@ const images = [
 ];
 
 const dir = "../img/low_resolution/";
-for (let i = 0; i < images.length; i++) {
-  galeria.innerHTML += `<img id='image${i}' src='${dir + images[i]}.gif'
-    alt='${images[i].replace(".gif", ".jpg")}' class='image rounded'>`;
-
-  document.getElementById("image" + i).onclick = () =>
-    (window.location.href = "miniaturas2.html?image=" + images[i]);
-}
+images.forEach((imagen) => {
+  galeria.innerHTML += `<img id='${imagen}' src='${dir + imagen}.gif'
+    alt='${imagen}' class='image rounded'>`;
+});
 
 const imagenes = document.querySelectorAll(".image");
 imagenes.forEach((imagen, i) => {
-  imagen.addEventListener(
-    "click",
-    () => (window.location.href = "miniaturas2.html?image=" + images[i])
-  );
+  imagen.addEventListener("click", () => {
+    window.location.href = `miniaturas2.html?image=${images[i]}`;
+  });
 });
